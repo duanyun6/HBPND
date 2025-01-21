@@ -23,8 +23,9 @@ N=zeros(h,w,d);
 for i=1:times      
     o_img=ceil(Alpha*o_img);
     N=Alpha*N+N1;
+    o_img=o_img+N;
 end
 
-o_img=o_img+N;
+
 o_img=mod(int32(o_img),256);
 o_img = uint8(o_img);
